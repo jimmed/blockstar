@@ -1,4 +1,4 @@
-import { split, Operation } from "apollo-link";
+import { split } from "apollo-link";
 import { HttpLink } from "apollo-link-http";
 import { WebSocketLink } from "apollo-link-ws";
 import { getMainDefinition } from "apollo-utilities";
@@ -7,18 +7,6 @@ import fetch from "electron-fetch";
 import { createIpcExecutor } from "graphql-transport-electron";
 import WebSocket from "ws";
 import { setContext } from "apollo-link-context";
-
-class TestWebSocketLink extends WebSocketLink {
-  constructor(...args: ConstructorParameters<typeof WebSocketLink>) {
-    super(...args);
-    console.log("LINK", args);
-  }
-
-  request(operation: Operation) {
-    console.log("OP", operation);
-    return super.request(operation);
-  }
-}
 
 export const listenForGraphQL = (uri: string) => {
   // FIXME: Find a better way of passing auth token to websocket link
@@ -35,7 +23,7 @@ export const listenForGraphQL = (uri: string) => {
     })
   );
 
-  const wsLink = new TestWebSocketLink({
+  const wsLink = new WebSocketLink({
     uri: uri.replace(/^http/, "ws"),
     options: {
       lazy: true,

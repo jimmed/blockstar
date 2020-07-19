@@ -47,6 +47,7 @@ importers:
       babel-loader: 8.1.0_0cfd9791b7d0e032fda143e7498c778b
       concurrently: 5.2.0
       cross-env: 7.0.2
+      css-hot-loader: 1.4.4
       dotenv-cli: 3.2.0
       electron: 9.1.0
       electron-builder: 22.7.0
@@ -89,6 +90,7 @@ importers:
       concurrently: 5.2.0
       core-js: '3'
       cross-env: 7.0.2
+      css-hot-loader: 1.4.4
       dotenv-cli: 3.2.0
       electron: 9.1.0
       electron-builder: 22.7.0
