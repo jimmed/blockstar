@@ -32,7 +32,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-
       - name: Install missing dependencies
-        run: node ./common/scripts/install-run-rush.js install
+        run: node ./common/scripts/install-run-rush.js install --to @blockstar/client
       - name: Compile packages
         run: node ./common/scripts/install-run-rush.js build --to @blockstar/client
         env:
