@@ -2,7 +2,7 @@
 
 > Create private lobbies for GTA Online
 
-[![Continuous Integration](https://github.com/jimmed/blockstar/workflows/Continuous%20Integration/badge.svg)](https://github.com/jimmed/blockstar/actions?query=workflow%3A%22Continuous+Integration%22)
+[![CI](https://github.com/jimmed/blockstar/workflows/CI/badge.svg)](https://github.com/jimmed/blockstar/actions?query=workflow%3A%22CI%22)
 
 ## Development environment
 

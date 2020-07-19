@@ -1,7 +1,7 @@
 importers:
   .:
     specifiers: {}
-  ../../app/desktop:
+  ../../app/client:
     dependencies:
       '@apollo/react-common': 3.1.4_1c2f01894304928efe6f8cba7418bc00
       '@apollo/react-hooks': 3.1.5_3764a1f028ed593aa18bd2512dc625fc

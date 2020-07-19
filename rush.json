@@ -22,8 +22,8 @@
       "shouldPublish": false
     },
     {
-      "packageName": "@blockstar/desktop",
-      "projectFolder": "app/desktop"
+      "packageName": "@blockstar/client",
+      "projectFolder": "app/client"
     }
   ]
 }
