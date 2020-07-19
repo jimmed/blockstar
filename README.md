@@ -1,48 +1,24 @@
-# TypeScript Monorepo Template
+# Blockstar
 
-![](https://github.com/jimmed/blockstar/workflows/Unit%20tests/badge.svg)
+> Create private lobbies for GTA Online
 
-## Using the template
+## Development environment
 
-Rush must be installed globally.
+This monorepo is managed by [rush](https://rushjs.io/).
 
-1. [Create a new repository based on this template](https://github.com/jimmed/blockstar/generate)
-
-2. Set the npm scope
-
-   ```sh
-   # Set the scope to '@myco'
-   sed -i "s/@blockstar/@myco/" *.* **/*.*
-   ```
-
-   - [About npm scopes](https://docs.npmjs.com/about-scopes)
-
-3. Set the registry URL
-
-   ```sh
-   # Set the repository to 'https://github.com/org/repo'
-   sed -i "s/jimmed\/rush-monorepo-ts/org\/repo/" *.* **/*.*
-   ```
-
-4. Update rush manifests
-
-   ```sh
-   rush update
-   ```
-
-## Performing a build
+### Performing a build
 
 ```sh
 rush build
 ```
 
-## Running unit tests
+### Running unit tests
 
 ```sh
 rush test
 ```
 
-## Creating a new package
+### Creating a new package
 
 ```sh
 rush create-package --path libraries/new-package --name @blockstar/new-package
