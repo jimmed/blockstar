@@ -15,6 +15,7 @@ import { Login } from "./components/Login";
 import { Main } from "./components/Main";
 import { useDiscordOAuth } from "./hooks/ipc/useDiscordLogin";
 import { setContext } from "apollo-link-context";
+import { ActiveLobbyProvider } from "./hooks/useActiveLobby";
 
 const client = new ApolloClient({
   cache: new InMemoryCache(),
@@ -47,7 +48,9 @@ export const App: FC = () => {
   return (
     <DarkMode>
       {oAuth.loggedIn ? (
-        <Main logout={oAuth.logout} />
+        <ActiveLobbyProvider>
+          <Main logout={oAuth.logout} />
+        </ActiveLobbyProvider>
       ) : (
         <Login oAuth={oAuth} />
       )}

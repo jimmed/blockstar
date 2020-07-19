@@ -82,12 +82,10 @@ export class Mutation<
 
     return useCallback(
       async (...callbackArgs: Args | []) => {
-        console.log({ args, callbackArgs });
         try {
           const variables = callbackArgs.length
             ? this.getVariables(...(callbackArgs as Args))
             : this.getVariables(...args);
-          console.log({ variables, this: this });
           return await mutate({ variables });
         } catch (error) {
           console.error(`Error in mutation`, JSON.parse(JSON.stringify(error)));
