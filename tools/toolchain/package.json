@@ -1,0 +1,21 @@
+{
+  "name": "@scope/toolchain",
+  "version": "1.0.0",
+  "description": "A toolchain used to build projects in this repo",
+  "private": true,
+  "bin": {
+    "build-ts": "./bin/build.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@types/jest": "25.2.1",
+    "@types/node": "13.13.5",
+    "jest": "25.5.4",
+    "rimraf": "3.0.2",
+    "ts-jest": "25.4.0",
+    "typescript": "3.8.3"
+  }
+}

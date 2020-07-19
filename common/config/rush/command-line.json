@@ -1,0 +1,49 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/rush/v5/command-line.schema.json",
+  "commands": [
+    {
+      "commandKind": "global",
+      "name": "test",
+      "summary": "Executes unit tests across all packages",
+      "shellCommand": "cd tools/toolchain && ./node_modules/.bin/jest --config ./jest.monorepo.config.js --passWithNoTests"
+    },
+    {
+      "commandKind": "global",
+      "name": "create-package",
+      "summary": "Creates a new TypeScript package",
+      "shellCommand": "./tools/create-package/bin/createPackage.js"
+    }
+  ],
+  "parameters": [
+    {
+      "parameterKind": "flag",
+      "shortName": "-w",
+      "longName": "--watch",
+      "associatedCommands": ["test"],
+      "description": "Executes unit tests in watch mode"
+    },
+    {
+      "parameterKind": "flag",
+      "shortName": "-v",
+      "longName": "--verbose",
+      "associatedCommands": ["test"],
+      "description": "Executes unit tests in verbose mode"
+    },
+    {
+      "parameterKind": "string",
+      "argumentName": "NAME",
+      "shortName": "-n",
+      "longName": "--name",
+      "associatedCommands": ["create-package"],
+      "description": "The name of the package, e.g. @scope/new-package"
+    },
+    {
+      "parameterKind": "string",
+      "argumentName": "PATH",
+      "shortName": "-p",
+      "longName": "--path",
+      "associatedCommands": ["create-package"],
+      "description": "The relative path to the package, e.g. libraries/new-package"
+    }
+  ]
+}

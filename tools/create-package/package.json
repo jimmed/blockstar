@@ -1,0 +1,18 @@
+{
+  "name": "@scope/create-package",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "build-ts",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@scope/toolchain": "1.0.0",
+    "@types/listr": "0.14.2",
+    "@types/node": "13.13.5"
+  },
+  "dependencies": {
+    "listr": "~0.14.3",
+    "any-observable": "~0.5.1",
+    "rxjs": "~6.5.5"
+  }
+}

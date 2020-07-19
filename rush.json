@@ -1,0 +1,22 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/rush/v5/rush.schema.json",
+  "rushVersion": "5.23.2",
+  "pnpmVersion": "2.15.1",
+  "nodeSupportedVersionRange": ">=12.16.1 <13.0.0",
+  "ensureConsistentVersions": true,
+  "repository": {
+    "url": "https://github.com/jimmed/rush-monorepo-ts"
+  },
+  "projects": [
+    {
+      "packageName": "@scope/toolchain",
+      "projectFolder": "tools/toolchain",
+      "shouldPublish": false
+    },
+    {
+      "packageName": "@scope/create-package",
+      "projectFolder": "tools/create-package",
+      "shouldPublish": false
+    }
+  ]
+}

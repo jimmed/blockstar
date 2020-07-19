@@ -1,0 +1,27 @@
+name: Unit tests
+
+on:
+  pull_request:
+    paths-ignore:
+      - '**.md'
+  push:
+    branches: [master]
+    paths-ignore:
+      - '**.md'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2-beta
+        with:
+          node-version: '12'
+      - name: Install dependencies
+        run: node ./common/scripts/install-run-rush.js install
+      - name: Build TypeScript
+        run: node ./common/scripts/install-run-rush.js build
+      - name: Run unit tests
+        run: node ./common/scripts/install-run-rush.js test
+        env:
+          CI: 'true'
