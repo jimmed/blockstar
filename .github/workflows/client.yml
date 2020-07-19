@@ -1,13 +1,17 @@
-name: CI
+name: Client Build
 
 on:
   pull_request:
     paths-ignore:
       - "**.md"
+      - "app/server"
+      - "tools/create-package"
   push:
     branches: [master]
     paths-ignore:
       - "**.md"
+      - "app/server"
+      - "tools/create-package"
 
 jobs:
   build-and-test:
@@ -37,7 +41,7 @@ jobs:
       - name: Run unit tests
         working-directory: ./tools/toolchain
         run: |
-          ./node_modules/.bin/jest --config ./jest.monorepo.config.js --passWithNoTests
+          ./node_modules/.bin/jest --config ./jest.monorepo.config.js --passWithNoTests --testPathIgnorePatterns=app/server
         env:
           CI: "true"
       - name: Bump version (master -> beta)

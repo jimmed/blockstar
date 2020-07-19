@@ -1,0 +1,56 @@
+name: Server Build
+
+on:
+  pull_request:
+    paths-ignore:
+      - "**.md"
+      - "app/client"
+      - "tools/create-package"
+  push:
+    branches: [master]
+    paths-ignore:
+      - "**.md"
+      - "app/client"
+      - "tools/create-package"
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2-beta
+        with:
+          node-version: "12"
+      - name: Restore dependencies from cache
+        id: cache
+        uses: actions/cache@v2
+        with:
+          path: |
+            common/temp/pnpm-store
+            $HOME/.rush
+          key: ${{ runner.os }}-${{ hashFiles('config/rush/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-
+      - name: Install missing dependencies
+        run: node ./common/scripts/install-run-rush.js install
+      - name: Compile packages
+        run: node ./common/scripts/install-run-rush.js build
+      - name: Run unit tests
+        working-directory: ./tools/toolchain
+        run: |
+          ./node_modules/.bin/jest --config ./jest.monorepo.config.js --passWithNoTests --testPathIgnorePatterns=app/client
+        env:
+          CI: "true"
+      - name: Bump version (master -> beta)
+        if: ${{ github.ref == 'refs/heads/master' }}
+        working-directory: ./app/server
+        run: yarn version --prerelease --preid beta.$(git rev-parse --short HEAD) --no-git-tag-version
+      - name: Bump version (pull_request -> alpha)
+        if: ${{ github.ref != 'refs/heads/master' && !startsWith(github.ref, 'refs/tags/server-v')}}
+        working-directory: ./app/server
+        run: yarn version --prerelease --preid alpha.$(git rev-parse --short HEAD) --no-git-tag-version
+      - name: Upload server app installer
+        uses: actions/upload-artifact@v2
+        with:
+          name: server-build
+          path: app/server/dist
