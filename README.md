@@ -2,7 +2,8 @@
 
 > Create private lobbies for GTA Online
 
-[![CI](https://github.com/jimmed/blockstar/workflows/CI/badge.svg)](https://github.com/jimmed/blockstar/actions?query=workflow%3A%22CI%22)
+[![Client Build](https://github.com/jimmed/blockstar/workflows/Client%20Build/badge.svg)](https://github.com/jimmed/blockstar/actions?query=workflow%3A%22Client+Build%22)
+[![Server Build](https://github.com/jimmed/blockstar/workflows/Server%20Build/badge.svg)](https://github.com/jimmed/blockstar/actions?query=workflow%3A%22Server+Build%22)
 
 ## Development environment
 
