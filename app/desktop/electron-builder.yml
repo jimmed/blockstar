@@ -1,0 +1,9 @@
+appId: engineering.spicy.blockstar
+extraMetadata:
+  name: Blockstar
+win:
+  target:
+    - target: nsis
+      arch:
+        - x64
+  requestedExecutionLevel: highestAvailable

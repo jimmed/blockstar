@@ -20,6 +20,10 @@
       "packageName": "@blockstar/create-package",
       "projectFolder": "tools/create-package",
       "shouldPublish": false
+    },
+    {
+      "packageName": "@blockstar/desktop",
+      "projectFolder": "app/desktop"
     }
   ]
 }
