@@ -6,7 +6,7 @@
     "test": "jest"
   },
   "devDependencies": {
-    "@blockstar/toolchain": "1.0.0",
+    "@blockstar/toolchain": "workspace:*",
     "@types/listr": "0.14.2",
     "@types/node": "13.13.5"
   },
