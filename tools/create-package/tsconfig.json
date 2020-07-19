@@ -1,5 +1,5 @@
 {
-  "extends": "@scope/toolchain/tsconfig.json",
+  "extends": "@blockstar/toolchain/tsconfig.json",
   "compilerOptions": {
     "rootDir": "src",
     "outDir": "dist"

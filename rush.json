@@ -5,16 +5,16 @@
   "nodeSupportedVersionRange": ">=12.16.1 <13.0.0",
   "ensureConsistentVersions": true,
   "repository": {
-    "url": "https://github.com/jimmed/rush-monorepo-ts"
+    "url": "https://github.com/jimmed/blockstar"
   },
   "projects": [
     {
-      "packageName": "@scope/toolchain",
+      "packageName": "@blockstar/toolchain",
       "projectFolder": "tools/toolchain",
       "shouldPublish": false
     },
     {
-      "packageName": "@scope/create-package",
+      "packageName": "@blockstar/create-package",
       "projectFolder": "tools/create-package",
       "shouldPublish": false
     }

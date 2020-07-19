@@ -47,7 +47,7 @@ new Listr([
               directory: path,
             },
             devDependencies: {
-              "@scope/toolchain": "1.0.0",
+              "@blockstar/toolchain": "1.0.0",
               "@types/jest": "~25.2.1",
               "@types/node": "~13.13.5",
               jest: "~25.5.4",
@@ -69,7 +69,7 @@ new Listr([
         resolve(packageDir, "tsconfig.json"),
         JSON.stringify(
           {
-            extends: "@scope/toolchain/tsconfig.json",
+            extends: "@blockstar/toolchain/tsconfig.json",
             compilerOptions: {
               rootDir: "src",
               outDir: "dist",
@@ -88,7 +88,7 @@ new Listr([
     task: () =>
       fs.writeFile(
         resolve(packageDir, "jest.config.js"),
-        'module.exports = require("@scope/toolchain/jest.base.config")',
+        'module.exports = require("@blockstar/toolchain/jest.base.config")',
         "utf8"
       ),
   },

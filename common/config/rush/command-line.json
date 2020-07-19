@@ -35,7 +35,7 @@
       "shortName": "-n",
       "longName": "--name",
       "associatedCommands": ["create-package"],
-      "description": "The name of the package, e.g. @scope/new-package"
+      "description": "The name of the package, e.g. @blockstar/new-package"
     },
     {
       "parameterKind": "string",

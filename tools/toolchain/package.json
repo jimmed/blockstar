@@ -1,5 +1,5 @@
 {
-  "name": "@scope/toolchain",
+  "name": "@blockstar/toolchain",
   "version": "1.0.0",
   "description": "A toolchain used to build projects in this repo",
   "private": true,

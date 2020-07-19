@@ -1,18 +1,18 @@
 # TypeScript Monorepo Template
 
-![](https://github.com/jimmed/rush-monorepo-ts/workflows/Unit%20tests/badge.svg)
+![](https://github.com/jimmed/blockstar/workflows/Unit%20tests/badge.svg)
 
 ## Using the template
 
 Rush must be installed globally.
 
-1. [Create a new repository based on this template](https://github.com/jimmed/rush-monorepo-ts/generate)
+1. [Create a new repository based on this template](https://github.com/jimmed/blockstar/generate)
 
 2. Set the npm scope
 
    ```sh
    # Set the scope to '@myco'
-   sed -i "s/@scope/@myco/" *.* **/*.*
+   sed -i "s/@blockstar/@myco/" *.* **/*.*
    ```
 
    - [About npm scopes](https://docs.npmjs.com/about-scopes)
@@ -45,5 +45,5 @@ rush test
 ## Creating a new package
 
 ```sh
-rush create-package --path libraries/new-package --name @scope/new-package
+rush create-package --path libraries/new-package --name @blockstar/new-package
 ```
