@@ -10,7 +10,7 @@ import {
   Skeleton,
   Stack,
 } from "@chakra-ui/core";
-import React, { FC } from "react";
+import React, { FC, useCallback } from "react";
 import { currentUserQuery } from "../hooks/graphql/query/currentUser";
 import { useIpAddresses } from "../hooks/ipc/useIpAddress";
 import { CopyToClipboard } from "./CopyToClipboard";
@@ -18,6 +18,7 @@ import { LobbyControls } from "./LobbyControls";
 import { LobbyList } from "./LobbyList";
 import { UserAvatar } from "./UserAvatar";
 import { Wrapper } from "./Wrapper";
+import { shell } from "electron";
 
 export const Main: FC<{ logout(): void }> = ({ logout }) => {
   const user = currentUserQuery.use();
@@ -51,7 +52,7 @@ export const Main: FC<{ logout(): void }> = ({ logout }) => {
             <Stack minW="md">
               <Stack direction="row" alignItems="center" p={4}>
                 <UserAvatar user={user} size="lg" m={2} />
-                <Box>
+                <Box flexGrow={1}>
                   <Heading color="gray.200" size="md" m={2}>
                     {user.username}
                     <code style={{ fontWeight: "normal" }}>
@@ -82,6 +83,17 @@ export const Main: FC<{ logout(): void }> = ({ logout }) => {
                     </Button>
                   </Stack>
                 </Box>
+                <Button
+                  m={2}
+                  variantColor="green"
+                  onClick={useCallback(() => {
+                    shell.openExternal(
+                      `steam://run/271590//-StraightIntoFreeMode -online/`
+                    );
+                  }, [])}
+                >
+                  Launch GTA
+                </Button>
               </Stack>
             </Stack>
           )}

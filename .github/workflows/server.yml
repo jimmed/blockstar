@@ -4,14 +4,14 @@ on:
   pull_request:
     paths-ignore:
       - "**.md"
-      - "app/client"
-      - "tools/create-package"
+      - "app/client/**/*"
+      - "tools/create-package/**/*"
   push:
     branches: [master]
     paths-ignore:
       - "**.md"
-      - "app/client"
-      - "tools/create-package"
+      - "app/client/**/*"
+      - "tools/create-package/**/*"
 
 jobs:
   build-and-test:
