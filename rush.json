@@ -24,6 +24,10 @@
     {
       "packageName": "@blockstar/client",
       "projectFolder": "app/client"
+    },
+    {
+      "packageName": "@blockstar/server",
+      "projectFolder": "app/server"
     }
   ]
 }

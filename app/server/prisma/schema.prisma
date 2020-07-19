@@ -1,0 +1,33 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+datasource sqlite {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  id            String   @id
+  username      String
+  discriminator String
+  avatar        String
+  ipv4          String?
+  ipv6          String?
+  joinedLobbies Lobby[]  @relation(name: "lobbyUser", references: [id])
+  ownedLobbies  Lobby[]  @relation(name: "lobbyOwner")
+  createdAt     DateTime @default(now())
+  updatedat     DateTime @default(now())
+}
+
+model Lobby {
+  id        String   @default(uuid()) @id
+  name      String
+  ownerId   String
+  owner     User     @relation(name: "lobbyOwner", fields: [ownerId], references: [id])
+  users     User[]   @relation(name: "lobbyUser", references: [id])
+  createdAt DateTime @default(now())
+  updatedAt DateTime @default(now())
+}
