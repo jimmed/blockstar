@@ -29,7 +29,7 @@ export const Login: FC<{ oAuth: DiscordOAuthHook }> = ({ oAuth }) => (
         loadingText={
           oAuth.status === OAuthStatus.GETTING_CODE
             ? "Logging in with Discord"
-            : "Logging in to Kuruma"
+            : "Logging in to Blockstar"
         }
         isLoading={oAuth.loading}
       >
@@ -41,7 +41,7 @@ export const Login: FC<{ oAuth: DiscordOAuthHook }> = ({ oAuth }) => (
           <AlertTitle mr={2}>
             {oAuth.status === OAuthStatus.GETTING_CODE_FAILED
               ? "Unable to login with Discord"
-              : "Unable to login to Kuruma"}
+              : "Unable to login to Blockstar"}
           </AlertTitle>
           <AlertDescription>
             {oAuth.status === OAuthStatus.GETTING_CODE_FAILED
