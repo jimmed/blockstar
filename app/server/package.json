@@ -2,8 +2,8 @@
   "name": "@blockstar/server",
   "version": "1.0.0",
   "scripts": {
-    "dev": "yarn db generate && nodemon -e ts -x ts-node -w src -- src",
-    "build": "yarn db generate && build-ts",
+    "dev": "prisma generate && nodemon -e ts -x ts-node -w src -- src",
+    "build": "prisma generate && ncc build ./src/index.ts -o ./dist",
     "db": "prisma",
     "test": "jest"
   },
@@ -47,6 +47,7 @@
     "nodemon": "2.0.4",
     "prettier": "2.0.5",
     "pretty-quick": "2.0.1",
-    "ts-node": "8.10.2"
+    "ts-node": "8.10.2",
+    "@zeit/ncc": "~0.22.3"
   }
 }

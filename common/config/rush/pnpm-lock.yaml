@@ -150,6 +150,7 @@ importers:
       '@types/node': 13.13.5
       '@types/node-fetch': 2.5.7
       '@types/uuid': 8.0.0
+      '@zeit/ncc': 0.22.3
       husky: 4.2.5
       nodemon: 2.0.4
       prettier: 2.0.5
@@ -168,6 +169,7 @@ importers:
       '@types/node': 13.13.5
       '@types/node-fetch': 2.5.7
       '@types/uuid': 8.0.0
+      '@zeit/ncc': ~0.22.3
       apollo-server: 2.15.1
       cors: 2.8.5
       date-fns: 2.14.0
@@ -2527,6 +2529,11 @@ packages:
     dev: true
     resolution:
       integrity: sha512-NuHqBY1PB/D8xU6s/thBgOAiAP7HOYDQ32+BFZILJ8ivkUkAHQnWfn6WhL79Owj1qmUnoN/YPhktdIoucipkAQ==
+  /@zeit/ncc/0.22.3:
+    dev: true
+    hasBin: true
+    resolution:
+      integrity: sha512-jnCLpLXWuw/PAiJiVbLjA8WBC0IJQbFeUwF4I9M+23MvIxTxk5pD4Q8byQBSPmHQjz5aBoA7AKAElQxMpjrCLQ==
   /abab/2.0.3:
     dev: true
     resolution:
