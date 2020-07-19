@@ -34,7 +34,7 @@ jobs:
       - name: Install missing dependencies
         run: node ./common/scripts/install-run-rush.js install
       - name: Compile packages
-        run: node ./common/scripts/install-run-rush.js build
+        run: node ./common/scripts/install-run-rush.js build --to @blockstar/server
       - name: Run unit tests
         working-directory: ./tools/toolchain
         run: |

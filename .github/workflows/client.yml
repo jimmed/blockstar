@@ -34,7 +34,7 @@ jobs:
       - name: Install missing dependencies
         run: node ./common/scripts/install-run-rush.js install
       - name: Compile packages
-        run: node ./common/scripts/install-run-rush.js build
+        run: node ./common/scripts/install-run-rush.js build --to @blockstar/client
         env:
           ELECTRON_WEBPACK_APP_API_ROOT: ${{ secrets.API_ROOT }}
           ELECTRON_WEBPACK_APP_DISCORD_CLIENT_ID: ${{ secrets.DISCORD_CLIENT_ID }}
