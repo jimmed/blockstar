@@ -4,9 +4,7 @@
   "pnpmVersion": "4.14.3",
   "nodeSupportedVersionRange": ">=12.16.1 <13.0.0",
   "ensureConsistentVersions": true,
-  "pnpmOptions": {
-    "useWorkspaces": true
-  },
+  "pnpmOptions": {},
   "repository": {
     "url": "https://github.com/jimmed/blockstar"
   },
