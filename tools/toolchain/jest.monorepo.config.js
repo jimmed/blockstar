@@ -39,10 +39,7 @@ module.exports = {
         displayName: packageName.replace(/^\@scarlet\//g, ""),
         preset: "ts-jest",
         modulePaths: ["<rootDir>/node_modules"],
-        testMatch: [
-          "<rootDir>/src/**/__tests__/**/*.ts?(x)",
-          "<rootDir>/src/**/?(*.)+test.ts?(x)",
-        ],
+        testMatch: ["<rootDir>/src/**/__tests__/**/*.test.ts?(x)"],
         ...jestCfg,
       };
     }),

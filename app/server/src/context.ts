@@ -6,7 +6,7 @@ import { DiscordLoginUserResult } from "./discord/auth/login";
 import { GetDiscordUserResult } from "./discord/user/getUser";
 
 export interface ServerContext {
-  user: ServerUser;
+  user?: ServerUser;
   discord: DiscordApi;
   db: PrismaClient;
   pubsub: PubSub;
@@ -18,7 +18,7 @@ export interface ServerUser extends GetDiscordUserResult {
   tokenExpiresAt: Date;
 }
 
-export interface RequestContext {
+export interface GraphQLRequestContext {
   req: { user?: DiscordLoginUserResult };
 }
 
@@ -26,7 +26,7 @@ const db = new PrismaClient();
 
 export const makeServerContext = (pubsub: PubSub) => ({
   req,
-}: RequestContext): ServerContext => ({
+}: GraphQLRequestContext): ServerContext => ({
   user: userContextFromJwtPayload(req.user)!,
   discord: discordApiForUser(req.user),
   db,

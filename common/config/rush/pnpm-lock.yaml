@@ -70,6 +70,7 @@ dependencies:
   jsonwebtoken: 8.5.1
   listr: 0.14.3_listr@0.14.3
   lodash: 4.17.19
+  nock: 13.0.3
   node-fetch: 2.6.0
   nodemon: 2.0.4
   prettier: 2.0.5
@@ -8246,6 +8247,17 @@ packages:
     dev: false
     resolution:
       integrity: sha512-ehY/mVQCf9BL0gKfsJBvFJen+1V//U+0HQMPrWct40ixE4jnv0bfvxDbWtAHL9EcaPEOJHVVYKoQn1TlZUB8Tw==
+  /nock/13.0.3:
+    dependencies:
+      debug: 4.1.1
+      json-stringify-safe: 5.0.1
+      lodash.set: 4.3.2
+      propagate: 2.0.1
+    dev: false
+    engines:
+      node: '>= 10.13'
+    resolution:
+      integrity: sha512-hDscKS5chEfyEiF8J1syz8mkkH6Wetp04ECAAPNdL5k6e6WmRgx9FZZNnCrjePNdykgiiPXORBcXbNmMzFOP5w==
   /node-fetch/2.6.0:
     dev: false
     engines:
@@ -9104,6 +9116,12 @@ packages:
     dev: false
     resolution:
       integrity: sha512-3pboPvLiWD7dkI3qf3KbUe6hKFKa52w+AE0VCqECtf+QHAKgOL37tTaNCnuX1nAAQ4ZhyP+kYVKf8rLmJ/feDQ==
+  /propagate/2.0.1:
+    dev: false
+    engines:
+      node: '>= 8'
+    resolution:
+      integrity: sha512-vGrhOavPSTz4QVNuBNdcNXePNdNMaO1xj9yBeH1ScQPjk/rhg9sSlCXPhMkFuaNNW/syTvYqsnbIJxMBfRbbag==
   /proto-list/1.2.4:
     dev: false
     optional: true
@@ -11895,6 +11913,7 @@ packages:
       is-uuid: 1.0.2
       jsonwebtoken: 8.5.1
       lodash: 4.17.19
+      nock: 13.0.3
       node-fetch: 2.6.0
       nodemon: 2.0.4
       prettier: 2.0.5
@@ -11909,7 +11928,7 @@ packages:
     peerDependencies:
       typescript: '*'
     resolution:
-      integrity: sha512-7NjJ/12Pr3YCzvDbYfPwfjpIt8bwCwHB8KbWh3rpEly3J4kSQWp2T3WzNa2saRuouweu99xzGxIwnwI8zn5OtQ==
+      integrity: sha512-enXzvVdz9FwzqfcAXu8dwD18xg8HSxl8kpyqVFmUIv1rqxjGTYii3r6eGfjeuHBh7o6nk4EBYCA1RDKNpelD+w==
       tarball: 'file:projects/server.tgz'
     version: 0.0.0
   'file:projects/toolchain.tgz':
@@ -11928,6 +11947,7 @@ packages:
       integrity: sha512-FHm5BfrX6YmTfvFkV+hSforMsA/BfHhKBN+dJJ+05meM68OVuPkZtubV+yS+soHhozigb6Ave5h0iK9oPyFzlA==
       tarball: 'file:projects/toolchain.tgz'
     version: 0.0.0
+registry: ''
 specifiers:
   '@apollo/react-common': ~3.1.4
   '@apollo/react-hooks': 3.1.5
@@ -12000,6 +12020,7 @@ specifiers:
   jsonwebtoken: 8.5.1
   listr: ~0.14.3
   lodash: 4.17.19
+  nock: ~13.0.3
   node-fetch: 2.6.0
   nodemon: 2.0.4
   prettier: 2.0.5

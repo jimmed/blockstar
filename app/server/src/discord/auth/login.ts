@@ -1,14 +1,9 @@
 import { addSeconds, getUnixTime } from "date-fns";
-import { pick } from "lodash/fp";
 import { URL } from "url";
 import { Wretcher } from "wretch";
 import { env } from "../../lib/env";
 import { discordWithAuth } from "../api";
-import {
-  getDiscordUser,
-  GetDiscordUserResult,
-  pickUserProps,
-} from "../user/getUser";
+import { getDiscordUser, GetDiscordUserResult } from "../user/getUser";
 
 export interface DiscordLoginParams {
   /** The code provided by query string on the redirect page of the frontend */
@@ -20,7 +15,7 @@ export interface DiscordLoginResult {
   accessToken: string;
   expiresAt: number;
   refreshToken: string;
-  scope: string;
+  scope: string[];
 }
 
 export interface DiscordLoginUserResult
