@@ -12,7 +12,7 @@ export interface DiscordApi extends Wretcher {
   getUser: ReturnType<typeof getDiscordUser>;
 }
 
-const wrapApiRoot = (root: Wretcher): DiscordApi =>
+const wrapApiRoot = (root: Wretcher): Wretcher & DiscordApi =>
   Object.assign(root, {
     login: discordLogin(root),
     logout: discordLogout(root),

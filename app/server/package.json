@@ -30,7 +30,8 @@
     "node-fetch": "2.6.0",
     "subscriptions-transport-ws": "0.9.17",
     "uuid": "8.2.0",
-    "wretch": "1.7.2"
+    "wretch": "1.7.2",
+    "nock": "~13.0.3"
   },
   "devDependencies": {
     "@blockstar/toolchain": "1.0.0",
