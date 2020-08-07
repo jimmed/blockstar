@@ -1,6 +1,10 @@
 {
   "title": "Blockstar",
-  "whiteListedModules": ["@apollo/react-hooks", "@chakra-ui/core"],
+  "whiteListedModules": [
+    "@apollo/react-hooks",
+    "@chakra-ui/core",
+    "source-map-support"
+  ],
   "main": {
     "extraEntries": ["@babel/polyfill"]
   },
