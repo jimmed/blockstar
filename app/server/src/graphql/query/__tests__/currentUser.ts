@@ -3,7 +3,7 @@ import { ServerContext } from "../../../context";
 import { discordApi } from "../../../discord/api";
 import { currentUserQuery } from "../currentUser";
 
-jest.mock("../../../discord/user/getUser");
+jest.mock("../../../discord/api");
 
 describe("currentUserQuery", () => {
   it("resolves a user", async () => {
@@ -11,7 +11,7 @@ describe("currentUserQuery", () => {
       currentUserQuery.resolve!(
         undefined,
         {},
-        { discord: discordApi() } as ServerContext,
+        { discord: discordApi(), user: {} } as ServerContext,
         {} as GraphQLResolveInfo
       )
     ).resolves.toEqual({
