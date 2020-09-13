@@ -27,7 +27,7 @@
     "is-uuid": "1.0.2",
     "jsonwebtoken": "8.5.1",
     "lodash": "4.17.19",
-    "node-fetch": "2.6.0",
+    "node-fetch": "2.6.1",
     "subscriptions-transport-ws": "0.9.17",
     "uuid": "8.2.0",
     "wretch": "1.7.2",
